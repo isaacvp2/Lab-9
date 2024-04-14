@@ -7,7 +7,6 @@ def encoder(data):
         if len(convert) > 1:
             convert = convert[1:]
         newstrdata+= convert
-
     return newstrdata
 
 
@@ -15,7 +14,10 @@ def encoder(data):
 
 
 def decoder(data):
-    pass
+    decoded = ''
+    for digit in data:
+        decoded += str(int(digit) - 3)
+    return decoded
 
 def main():
     encode = 0
